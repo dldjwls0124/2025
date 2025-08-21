@@ -1,2 +1,2 @@
 import streamlit as st
-st.title('어진이 전용 앱')
+st.title('세빈이')
