@@ -25,7 +25,7 @@ BASE_QUIZ = [
         "question": "다음 사진 속 궁궐은 어디일까요? 🏯",
         "options": ["경복궁", "창덕궁", "덕수궁", "창경궁"],
         "answer": "경복궁",
-        "image": "https://share.google/images/n509h7fLfzg8GbxtG",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Seoul-Gyeongbokgung-Geunjeongjeon-01.jpg",
         "level": "이미지",
         "explain": "사진은 경복궁의 정전인 '근정전'이 보이는 각도예요. 조선의 정궁이죠."
     },
