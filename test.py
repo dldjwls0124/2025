@@ -19,40 +19,40 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# ====== 문제 데이터 (어려운 2, 쉬운 1, 이미지 1) ======
+# ====== 문제 데이터 (시대 순서: 고대 → 고려 → 조선 → 근현대) ======
 BASE_QUIZ = [
     {
-        "question": "다음 사진 속 궁궐은 어디일까요? 🏯",
-        "options": ["경복궁", "창덕궁", "덕수궁", "창경궁"],
-        "answer": "경복궁",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Seoul-Gyeongbokgung-Geunjeongjeon-01.jpg",
-        "level": "이미지",
-        "explain": "사진은 경복궁의 정전인 '근정전'이 보이는 각도예요. 조선의 정궁이죠."
-    },
-    {
-        "question": "광종이 과거제를 실시한 해는 언제일까요? 📜",
-        "options": ["958년", "976년", "993년", "1018년"],
-        "answer": "958년",
+        "question": "광개토대왕이 활약한 시기의 나라는 어디일까요? 🗡️",
+        "options": ["고구려", "백제", "신라", "가야"],
+        "answer": "고구려",
         "image": None,
         "level": "어려움",
-        "explain": "광종 9년(958), 후주 출신 쌍기의 건의로 과거제를 실시하여 신라 골품 잔재를 약화시켰어요."
+        "explain": "광개토대왕(재위 391~413)은 고구려 제19대 왕으로, 만주와 한반도 북부까지 영토를 크게 확장했습니다."
     },
     {
-        "question": "『경국대전』이 완성된 왕은 누구일까요? 📖",
-        "options": ["세조", "성종", "태종", "정조"],
-        "answer": "성종",
+        "question": "고려에서 몽골의 침입에 맞서 1270년까지 항쟁을 이어간 무리의 이름은 무엇일까요? ⚔️",
+        "options": ["삼별초", "화랑", "의병", "동학군"],
+        "answer": "삼별초",
         "image": None,
-        "level": "어려움",
-        "explain": "경국대전은 세조 때 편찬 시작, 성종 16년(1485)에 완성·반포되었습니다."
+        "level": "중간",
+        "explain": "삼별초는 고려 무신정권의 군사 조직으로, 강화도·진도·제주도로 옮겨가며 끝까지 항몽 항쟁을 이어갔습니다."
     },
     {
-        "question": "3·1 운동이 일어난 해는? ✊",
-        "options": ["1910년", "1919년", "1945년", "1950년"],
+        "question": "조선 세종 때 만들어진 과학 기구로, 해시계를 뜻하는 것은 무엇일까요? 🌞",
+        "options": ["앙부일구", "혼천의", "측우기", "자격루"],
+        "answer": "앙부일구",
+        "image": None,
+        "level": "중간",
+        "explain": "앙부일구는 세종 대에 제작된 해시계로, 백성들이 시간을 쉽게 알 수 있도록 설치되었습니다."
+    },
+    {
+        "question": "대한민국 임시정부가 수립된 해는 언제일까요? 🇰🇷",
+        "options": ["1919년", "1945년", "1950년", "1960년"],
         "answer": "1919년",
         "image": None,
         "level": "쉬움",
-        "explain": "1919년 3월 1일 전국적 독립만세운동이 전개되었고, 대한민국 임시정부 수립으로 이어졌어요."
-    },
+        "explain": "1919년 3·1 운동 직후, 독립운동가들은 중국 상하이에 대한민국 임시정부를 수립했습니다."
+    }
 ]
 
 # ====== 상태 초기화 ======
@@ -75,11 +75,11 @@ num_questions = len(quiz)
 
 # ====== 헤더 ======
 st.markdown(
-    "<div class='big-title'>🎉 반짝반짝 역사 퀴즈 쇼! ✨</div>",
+    "<div class='big-title'>🎉 시대별 역사 퀴즈 ✨</div>",
     unsafe_allow_html=True,
 )
 st.markdown(
-    f"<span class='badge'>문항 {current_idx+1 if current_idx < num_questions else num_questions}/{num_questions} • 도전 등급: 어려운 2 + 쉬운 1 + 이미지 1</span>",
+    f"<span class='badge'>문항 {current_idx+1 if current_idx < num_questions else num_questions}/{num_questions} • 난이도: 어려움1 + 중간2 + 쉬움1</span>",
     unsafe_allow_html=True,
 )
 
@@ -155,4 +155,3 @@ else:
         st.rerun()
 
     st.markdown("</div>", unsafe_allow_html=True)
-
